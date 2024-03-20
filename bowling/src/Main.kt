@@ -67,7 +67,7 @@ class Game {
         }
     }
     private fun isStrike(pins: Int): Boolean {
-        return pins == 10 && currentRoll <= 19
+        return pins == 10 && currentRoll <= 19 && currentRoll %2 == 1
     }
     private fun isSpare(pins: Int): Boolean {
         return currentRoll > 1 && currentRoll %2 == 0 && pins + rolls[currentRoll - 2] == 10
